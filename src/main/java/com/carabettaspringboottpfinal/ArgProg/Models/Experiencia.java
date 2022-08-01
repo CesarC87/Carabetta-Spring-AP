@@ -4,16 +4,22 @@
  */
 package com.carabettaspringboottpfinal.ArgProg.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Getter @Setter
 @Entity
@@ -22,6 +28,17 @@ public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private ArrayList experiencia;   
+    private String experiencia;   
+    
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+
+    @JoinColumn(name = "person_id", nullable = false)
+
+    @OnDelete(action=OnDeleteAction.NO_ACTION)
+
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
+    private User user;
+
     
 }

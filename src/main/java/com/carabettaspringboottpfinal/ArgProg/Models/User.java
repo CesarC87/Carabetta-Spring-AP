@@ -26,6 +26,6 @@ public class User {
     private String apellido;
     private int edad;      
     private String sobreMi;    
-    private ArrayList experiencia;
+    private String experiencia;
     
 }
