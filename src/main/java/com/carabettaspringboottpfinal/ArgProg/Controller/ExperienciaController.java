@@ -4,8 +4,8 @@
  */
 package com.carabettaspringboottpfinal.ArgProg.Controller;
 
-import com.carabettaspringboottpfinal.ArgProg.Models.User;
-import com.carabettaspringboottpfinal.ArgProg.Service.IUserService;
+import com.carabettaspringboottpfinal.ArgProg.Models.Experiencia;
+import com.carabettaspringboottpfinal.ArgProg.Service.IExperienciaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,19 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class UserController {
+public class ExperienciaController {
     
     @Autowired
-    private IUserService userServ;
+    private IExperienciaService expServ;
 
-    @GetMapping("/user")
+    @GetMapping("/experiencia")
     @ResponseStatus(HttpStatus.OK)
-    public List<User> getUser() {
-        return userServ.getUser();
+    public List<Experiencia> getExperiencia() {
+        return expServ.getExperiencia();
     }
     
-    @PostMapping("/user")
-    public void postUser(@RequestBody User us){
-        userServ.postUser(us);
+    @PostMapping("/experiencia")
+    public void postExperiencia(@RequestBody Experiencia exp){
+        expServ.postExperiencia(exp);
     }    
 }
