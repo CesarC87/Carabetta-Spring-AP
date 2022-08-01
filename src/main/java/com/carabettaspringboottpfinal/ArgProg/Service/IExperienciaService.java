@@ -13,5 +13,6 @@ import java.util.List;
  */
 public interface IExperienciaService {
     public List<Experiencia> getExperiencia();
+    public List<Experiencia> getExperiencia_title();
     public void postExperiencia (Experiencia exp);
 }

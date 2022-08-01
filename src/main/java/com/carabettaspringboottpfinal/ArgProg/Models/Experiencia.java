@@ -29,16 +29,17 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String experiencia;   
+    private String exp_title;
     
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-
-    @JoinColumn(name = "person_id", nullable = false)
-
-    @OnDelete(action=OnDeleteAction.NO_ACTION)
-
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-
-    private User user;
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//
+//    @JoinColumn(name = "person_id", nullable = false)
+//
+//    @OnDelete(action=OnDeleteAction.NO_ACTION)
+//
+//    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//
+//    private User user;
 
     
 }
