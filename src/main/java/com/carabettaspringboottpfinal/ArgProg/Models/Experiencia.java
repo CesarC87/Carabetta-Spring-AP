@@ -31,7 +31,7 @@ public class Experiencia {
     private String experiencia;   
     private String exp_title;
     private String logo;
-    private int person_id;
+    private int person_id; 
     
 //    @ManyToOne(fetch = FetchType.LAZY, optional = false)
 //
