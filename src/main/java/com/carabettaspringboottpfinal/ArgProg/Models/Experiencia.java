@@ -30,6 +30,8 @@ public class Experiencia {
     private Long id;
     private String experiencia;   
     private String exp_title;
+    private String logo;
+    private int person_id;
     
 //    @ManyToOne(fetch = FetchType.LAZY, optional = false)
 //
