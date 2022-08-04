@@ -21,7 +21,7 @@ public class ExperienciaService implements IExperienciaService {
     }
     
     @Override
-    public List<Experiencia> getExperiencia_title() {
+    public List<Experiencia> getExperiencia_title() { 
         return expRepo.findAll();
     }
 
