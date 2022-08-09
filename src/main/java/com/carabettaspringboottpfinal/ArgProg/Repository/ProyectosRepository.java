@@ -4,11 +4,9 @@
  */
 package com.carabettaspringboottpfinal.ArgProg.Repository;
 
-import com.carabettaspringboottpfinal.ArgProg.Models.Educacion;
+import com.carabettaspringboottpfinal.ArgProg.Models.Proyectos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-
-public interface EducacionRepository extends JpaRepository <Educacion, Long>{
-    
+public interface ProyectosRepository extends JpaRepository <Proyectos, Long>{
     
 }
