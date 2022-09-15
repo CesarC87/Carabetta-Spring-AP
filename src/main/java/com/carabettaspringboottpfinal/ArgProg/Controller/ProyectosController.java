@@ -9,6 +9,7 @@ import com.carabettaspringboottpfinal.ArgProg.Service.IProyectosService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ public class ProyectosController {
     @Autowired
     private IProyectosService proyServ;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/proyectos")
     @ResponseStatus(HttpStatus.OK)
     public List<Proyectos> getProyectos() {

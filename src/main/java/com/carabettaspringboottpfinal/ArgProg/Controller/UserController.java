@@ -9,6 +9,7 @@ import com.carabettaspringboottpfinal.ArgProg.Service.IUserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,8 @@ public class UserController {
     
     @Autowired
     private IUserService userServ;
-
+    
+    @CrossOrigin(origins = "*")
     @GetMapping("/user")
     @ResponseStatus(HttpStatus.OK)
     public List<User> getUser() {
