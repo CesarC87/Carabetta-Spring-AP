@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/classes:target/dependency/* com.carabettaspringboottpfinal.ArgProg
+web: java -jar target/ArgProg-0.0.1-SNAPSHOT.jar
