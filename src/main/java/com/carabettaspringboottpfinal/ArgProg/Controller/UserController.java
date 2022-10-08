@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -25,7 +26,6 @@ public class UserController {
     @Autowired
     private IUserService userServ;
     
-    @CrossOrigin(origins = "*")
     @GetMapping("/user")
     @ResponseStatus(HttpStatus.OK)
     public List<User> getUser() {
