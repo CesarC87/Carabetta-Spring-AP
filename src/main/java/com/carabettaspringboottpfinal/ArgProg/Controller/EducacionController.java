@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class EducacionController {
